@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-int fibonacci(int number)
+extern int fibonacci(int x);
+
+int main(int argc, char **argv)
 {
-   int answer;
-   if(number == 0 || number== 1)
-      answer = 1;
-   else      
-      answer = fibonacci(n-1)+fibonacci(n-2);
-   return(answer);
-  printf("The fibonacci sequence at %d is: %d\n",number,answer);
+  int number=0;
+  int result=0;
+
+  scanf("%d",&number);
+  result = fibonacci(number);   
+  printf("The fibonacci sequence at %d is: %d\n", number, result);
 }
